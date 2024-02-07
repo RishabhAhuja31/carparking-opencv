@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif; /* Specify your preferred font-family */
+        }
+
+        body {
+            background-color: #FFFFDD; /* Set a light background color */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #D2DE32; /* Set a dark background color for the header */
+            color: #fff; /* Set text color for the header */
+            padding: 15px;
+            margin: 0; /* Remove default margin */
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 50%;
+            padding: 10px;
+            height: 300px;
+        }
+
+        form {
+            background-color: #61A3BA; /* Set a white background color for the form */
+            padding: 20px;
+            border-radius: 10px; /* Add rounded corners to the form */
+        }
+
+        /* Add more styles as needed */
+    </style>
+</head>
+
+<body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+<h1>Smart Parking System</h1>
+
+<div>
+    <div class="row">
+        <div class="column">
+            <img src="{{ url_for('video') }}" width="100%" />
+        </div>
+        <div class="column">
+            <form action="/submit" method='post'>
+
+                <p id="hello"></p>
+                <!-- Your form elements go here -->
+            </form>
+        </div>
+    </div>
+    <ul></ul>
+</div>
+<script>
+    // Your scripts go here
+</script>
+</body>
+
+</html>
